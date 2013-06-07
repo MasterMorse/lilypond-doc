@@ -3,11 +3,29 @@
 
 \version "2.17.18"
 
-% Plain signature of the function draft
+#(define (prt prop)
+   (list?)
+   (display prop)
+   (newline)
+   )
+
+#(define (displaylists l)
+   (list? l)
+   (display l)
+   (newline))
+
+#(define (proc-property p)
+   (ly:input-message t)
+   (display i)
+   (newline))
+
+
 annotate = 
 #(define-music-function (parser location type properties annotation item)
    (string? ly:context-mod? string? symbol-list-or-music?)
-     (define props (ly:get-context-mods properties))
+     (for-each (begin
+                ((display i)(newline) (ly:get-context-mods properties))))
+     ;(display props)
      ;(ly:input-warning location voice)
      #{
         \once \override $item #'color = #red
@@ -25,4 +43,7 @@ annotate =
     "Tenuto added as in Vc. 2"
     Script
   g1-- 
+  
+  \once \override NoteHead.color = #red
+  { a4 b c b }
 }
