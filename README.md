@@ -1,9 +1,7 @@
 lilypond-doc
 ============
 
-Library and application to generate documentation from LilyPond source files.  
-This repository is part of the **`openLilyLib`** family of resources.
+This is a stub for future development of an API doc solution for LilyPond 
+source files and libraries.
 
----
-
-Currently this is only a placeholder for future development.
+See the [Wiki](https://github.com/openlilylib/lilypond-doc/wiki) for some more details.
